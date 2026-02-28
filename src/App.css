@@ -1,0 +1,77 @@
+body {
+  font-family: system-ui, sans-serif;
+  background-color: #f1f5f8;
+}
+
+.container {
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+.title {
+  text-align: center;
+}
+
+.btn {
+  background-color: #6574cd;
+  color: white;
+  border: none;
+  padding: 7px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  cursor: not-allowed;
+}
+
+.btn--delete {
+  background-color: transparent;
+}
+
+.btn--delete:hover path {
+  fill: #e3342f;
+}
+
+.btn--check {
+  background-color: transparent;
+}
+
+.btn--check path {
+  fill: black;
+}
+
+.btn--check:hover path {
+  fill: #38c172;
+}
+
+.todo-list__empty {
+  text-align: center;
+  color: #999;
+}
+
+.form {
+  display: block;
+  margin-bottom: 2rem;
+}
+
+.form__group {
+  display: flex;
+  width: 100%;
+}
+
+.form-control {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #6574cd;
+}
+
+.btn--add-todo {
+  border-radius: 0 5px 5px 0;
+}
