@@ -64,14 +64,12 @@ const removeTodo = async (id) => {
   });
 };
 
-const completeTodo = (id) => {
-  console.log(id)
-  const todo = {
-    "completed": true,
-  };
-  fetchTodos(`http://localhost:3000/todos/${id}`, {
+const completeTodo = (todo) => {
+  console.log(todo.id)
+
+  fetchData(`http://localhost:3000/todos/${todo.id}`, {
     method: "PATCH",
-    body: JSON.stringify(todo),
+    body: { completed: !todo.completed},
   }).then(() => {
     fetchTodos();
   });
@@ -80,7 +78,7 @@ const completeTodo = (id) => {
 const clearCompleted = () => {
   for (let i = todos.length - 1; i >= 0; i--) {
     if (todos[i].completed) {
-      fetchTodos(`http://localhost:3000/todos/${todos[i].id}`, {
+      fetchData(`http://localhost:3000/todos/${todos[i].id}`, {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
       }).then(() => {
