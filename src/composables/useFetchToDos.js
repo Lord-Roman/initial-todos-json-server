@@ -1,6 +1,6 @@
 import { ref } from "vue";
 
-export function useFetchToDos() {
+export function useFetchTodos() {
   const isLoading = ref(false);
   const error = ref("");
 
@@ -10,9 +10,7 @@ export function useFetchToDos() {
     try {
       const response = await fetch(url, {
         ...options,
-        body: options.body
-          ? JSON.stringify(options.body)
-          : null,
+        body: options.body ? JSON.stringify(options.body): null,
       });
       if (!response.ok) {
         throw new Error("Ошибка получения данных");

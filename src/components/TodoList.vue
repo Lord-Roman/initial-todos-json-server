@@ -6,7 +6,7 @@
         :key="todo.id"
         v-bind="todo"
         @remove="() => $emit('remove-todo', todo.id)"
-        @complete.once="() => (todo.completed = !todo.completed)"
+        @complete.once="$emit('complete', todo.id)"
       />
     </ul>
     <div class="todo-list__empty" v-if="!todos.length">

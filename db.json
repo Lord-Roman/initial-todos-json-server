@@ -6,23 +6,23 @@
       "completed": true
     },
     {
-      "id": "2",
-      "text": "Создать TodoList приложение",
-      "completed": false
-    },
-    {
       "id": "1772278702043",
       "text": "123",
-      "completed": false
+      "completed": true
     },
     {
       "id": "1772279682422",
       "text": "Test",
-      "completed": false
+      "completed": true
     },
     {
       "id": "1772279719105",
       "text": "Ещё тест",
+      "completed": true
+    },
+    {
+      "id": "1772285196672",
+      "text": "123",
       "completed": false
     }
   ]
